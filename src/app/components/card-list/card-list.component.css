@@ -1,0 +1,82 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.colum{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card{
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: white;
+  flex-direction: column;
+}
+
+img{
+    width: 25rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+}
+
+.title{
+    position: absolute;
+    width: 15rem;
+    height: 3rem;
+    top: 15rem;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.p-1{
+  padding: 1rem;
+}
+
+.info{
+    color: rgb(83, 83, 83);
+    font-weight: bold;
+    position: relative;
+    bottom: 0.5rem;
+}
+
+.info::after {
+    content: '\A';
+    white-space: pre;
+}
+
+
+.delete{
+    color: red;
+}
+
+button{
+  background-color: white;
+  width: 5.5rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  border: rgba(245, 245, 245) 0.01rem solid;
+  margin: 1rem;
+  transition: box-shadow 0.3s;
+}
+
+.delete:hover{
+  box-shadow: inset 0rem 0rem 8rem rgba(255, 11, 11, 0.05);
+}
+
+.delete:active{
+  box-shadow: inset 0rem 0rem 8rem rgb(255, 11, 11, 0.3);
+}
+
+.viewMore:hover{
+  box-shadow: inset 0rem 0rem 8rem rgba(40, 40, 40, 0.05);
+}
+
+.viewMore:active{
+  box-shadow: inset 0rem 0rem 8rem rgb(40, 40, 40, 0.3);
+}

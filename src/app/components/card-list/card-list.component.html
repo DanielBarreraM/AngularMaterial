@@ -1,0 +1,24 @@
+
+<div class="main">
+    <div *ngFor="let card of cards" class="colum">
+        <div class="card">
+            <img mat-card-image src={{card.img}}>
+            <h1 class="title">T7K_PLUS</h1>
+            <div class="p-1">
+              <div>
+                <mat-icon>room</mat-icon>
+                <span class="info">Address:</span>
+              </div>
+              <p>{{card?.adress}}</p>
+              <div>
+                <mat-icon>av_timer</mat-icon>
+                <span class="info">Date: </span>
+              </div>
+              <p>{{card?.date.toDateString()}}</p>
+            </div>
+            <hr>
+            <button class="delete">Delete</button>
+            <button class="viewMore">View more</button>
+        </div>
+    </div>
+</div>
