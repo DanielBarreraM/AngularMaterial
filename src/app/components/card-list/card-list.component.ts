@@ -6,12 +6,9 @@ import { Card } from 'src/app/models/card.model';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.css']
 })
-export class CardListComponent implements OnInit{
-
-
+export class CardListComponent {
 
   @Input() cards: Card[];
-
 
   /** Evento para cambiar la tarea a anclada */
   // tslint:disable-next-line: no-output-on-prefix
@@ -22,9 +19,4 @@ export class CardListComponent implements OnInit{
   // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onArchiveTask = new EventEmitter<Event>();
-
-  ngOnInit(): void {
-    console.log(this.cards)
-  }
-
 }

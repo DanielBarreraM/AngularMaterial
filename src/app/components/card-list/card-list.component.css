@@ -1,9 +1,15 @@
+:host{
+  --border:0.5rem;
+}
+
 .main{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .colum{
+
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 2rem;
@@ -11,7 +17,7 @@
 
 .card{
   position: relative;
-  border-radius: 0.5rem;
+  border-radius: var(--border);
   background-color: white;
   flex-direction: column;
 }
@@ -50,7 +56,6 @@ img{
     white-space: pre;
 }
 
-
 .delete{
     color: red;
 }
@@ -79,4 +84,18 @@ button{
 
 .viewMore:active{
   box-shadow: inset 0rem 0rem 8rem rgb(40, 40, 40, 0.3);
+}
+
+@media screen and (max-width: 25rem) {
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  .title{
+    width: 70%;
+    top: 24%;
+  }
+  button{
+    width: 30%;
+  }
 }

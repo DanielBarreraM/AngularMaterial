@@ -1,4 +1,4 @@
-import { moduleMetadata, Story, Meta, componentWrapperDecorator } from '@storybook/angular';
+import { moduleMetadata, Story, Meta } from '@storybook/angular';
 
 import { CommonModule } from '@angular/common';
 
@@ -43,8 +43,8 @@ const Template: Story<CardListComponent> = args => ({
   },
 });
 
-export const Default = Template.bind({});
-Default.args = {
+export const CardList = Template.bind({});
+CardList.args = {
   cards: [
     {
       adress: 'calle blabvla',

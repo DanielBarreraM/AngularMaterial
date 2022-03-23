@@ -10,15 +10,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
-
-
-
+import { EmptyComponent } from './components/empty/empty.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardListComponent,
-
+    EmptyComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +29,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatMenuModule,
     MatToolbarModule,
     MatDividerModule,
+    MatProgressSpinnerModule,
 
   ],
   providers: [],

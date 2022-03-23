@@ -31,7 +31,7 @@ export default {
     }),
   ],
   excludeStories: /.*Data$/,
-  title: 'List',
+  title: 'Card',
 } as Meta;
 
 export const actionsData = {
@@ -48,8 +48,8 @@ const Template: Story<CardComponent> = args => ({
   },
 });
 
-export const Default = Template.bind({});
-Default.args = {
+export const Card = Template.bind({});
+Card.args = {
   card: {
     adress: 'calle blabvla',
     date: new Date(2017, 4, 4, 17, 23, 42, 11),
