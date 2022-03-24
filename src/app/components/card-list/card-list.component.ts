@@ -6,9 +6,10 @@ import { Card } from 'src/app/models/card.model';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.css']
 })
-export class CardListComponent {
+export class CardListComponent{
 
   @Input() cards: Card[];
+  @Input() loading: boolean;
 
   /** Evento para cambiar la tarea a anclada */
   // tslint:disable-next-line: no-output-on-prefix
@@ -19,4 +20,5 @@ export class CardListComponent {
   // tslint:disable-next-line: no-output-on-prefix
   @Output()
   onArchiveTask = new EventEmitter<Event>();
+
 }

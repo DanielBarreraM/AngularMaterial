@@ -1,5 +1,4 @@
-
-<div class="main">
+<div *ngIf="!loading; else loaading" class="main">
     <div *ngFor="let card of cards" class="colum">
         <div class="card">
             <img mat-card-image src={{card.img}}>
@@ -21,4 +20,7 @@
             <button class="viewMore">View more</button>
         </div>
     </div>
+    <app-empty *ngIf="cards.length<=0"></app-empty>
 </div>
+
+<ng-template #loaading><app-loading></app-loading></ng-template>

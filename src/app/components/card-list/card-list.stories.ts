@@ -11,6 +11,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {LoadingComponent} from '../loading/loading.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {EmptyComponent} from '../empty/empty.component';
 
 import * as CardStories from '../card/card.stories';
 
@@ -19,7 +22,7 @@ export default {
   decorators: [
     moduleMetadata({
       // 👇 Importa ambos componentes para permitir la composición de componentes con Storybook
-      declarations: [CardListComponent, CardComponent],
+      declarations: [CardListComponent, CardComponent, LoadingComponent, EmptyComponent],
       imports: [
           CommonModule,
           MatCardModule,
@@ -28,7 +31,8 @@ export default {
           MatIconModule,
           MatToolbarModule,
           MatMenuModule,
-          BrowserAnimationsModule
+          BrowserAnimationsModule,
+          MatProgressSpinnerModule
         ],
     }),
   ],
@@ -72,4 +76,15 @@ CardList.args = {
         img: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
     },
   ],
+};
+
+export const Loading_Empty = Template.bind({});
+Loading_Empty.args = {
+  cards: [
+    CardList.args.cards[0],
+    CardList.args.cards[1],
+    CardList.args.cards[2],
+    CardList.args.cards[3],
+  ],
+  loading: true,
 };
