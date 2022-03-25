@@ -20,6 +20,7 @@
   border-radius: var(--border);
   background-color: white;
   flex-direction: column;
+  box-shadow: 0rem 0rem 8rem rgba(0,0,0,0.3);
 }
 
 img{
@@ -51,39 +52,10 @@ img{
     bottom: 0.5rem;
 }
 
-.info::after {
-    content: '\A';
-    white-space: pre;
-}
-
-.delete{
-    color: red;
-}
-
 button{
-  background-color: white;
   width: 5.5rem;
   height: 2.5rem;
-  border-radius: 0.3rem;
-  border: rgba(245, 245, 245) 0.01rem solid;
   margin: 1rem;
-  transition: box-shadow 0.3s;
-}
-
-.delete:hover{
-  box-shadow: inset 0rem 0rem 8rem rgba(255, 11, 11, 0.05);
-}
-
-.delete:active{
-  box-shadow: inset 0rem 0rem 8rem rgb(255, 11, 11, 0.3);
-}
-
-.viewMore:hover{
-  box-shadow: inset 0rem 0rem 8rem rgba(40, 40, 40, 0.05);
-}
-
-.viewMore:active{
-  box-shadow: inset 0rem 0rem 8rem rgb(40, 40, 40, 0.3);
 }
 
 @media screen and (max-width: 25rem) {

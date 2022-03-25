@@ -1,6 +1,6 @@
 import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
-import '../src/app/components/card-list/card-list.component.css';
+import '../src/app/components/emergency-list/emergency-list.component.css';
 setCompodocJson(docJson);
 
 export const parameters = {

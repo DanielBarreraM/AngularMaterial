@@ -2,7 +2,7 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 
 import { CommonModule } from '@angular/common';
 
-import { CardListComponent } from './card-list.component';
+import { EmergencyListComponent } from './emergency-list.component';
 import { CardComponent } from '../card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
@@ -18,11 +18,11 @@ import {EmptyComponent} from '../empty/empty.component';
 import * as CardStories from '../card/card.stories';
 
 export default {
-  component: CardListComponent,
+  component: EmergencyListComponent,
   decorators: [
     moduleMetadata({
       // 👇 Importa ambos componentes para permitir la composición de componentes con Storybook
-      declarations: [CardListComponent, CardComponent, LoadingComponent, EmptyComponent],
+      declarations: [EmergencyListComponent, CardComponent, LoadingComponent, EmptyComponent],
       imports: [
           CommonModule,
           MatCardModule,
@@ -39,7 +39,7 @@ export default {
   title: 'CardList',
 } as Meta;
 
-const Template: Story<CardListComponent> = args => ({
+const Template: Story<EmergencyListComponent> = args => ({
   props: {
     ...args,
     onPinTask: CardStories.actionsData.onPinTask,
@@ -49,7 +49,7 @@ const Template: Story<CardListComponent> = args => ({
 
 export const CardList = Template.bind({});
 CardList.args = {
-  cards: [
+  emergencies: [
     {
       adress: 'calle blabvla',
       date: new Date(2017, 4, 4, 17, 23, 42, 11),
@@ -80,11 +80,11 @@ CardList.args = {
 
 export const Loading_Empty = Template.bind({});
 Loading_Empty.args = {
-  cards: [
-    CardList.args.cards[0],
-    CardList.args.cards[1],
-    CardList.args.cards[2],
-    CardList.args.cards[3],
+  emergencies: [
+    CardList.args.emergencies[0],
+    CardList.args.emergencies[1],
+    CardList.args.emergencies[2],
+    CardList.args.emergencies[3],
   ],
   loading: true,
 };

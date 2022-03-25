@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Card } from 'src/app/models/card.model';
+import { Emergency } from 'src/app/models/emergency.model';
 
 @Component({
   selector: 'app-card',
@@ -8,7 +8,7 @@ import { Card } from 'src/app/models/card.model';
 })
 export class CardComponent {
 
-  @Input() card: Card;
+  @Input() card: Emergency;
 
   // tslint:disable-next-line: no-output-on-prefix
   @Output()
@@ -18,5 +18,5 @@ export class CardComponent {
   @Output()
   onArchiveTask = new EventEmitter<Event>();
 
-  
+
 }
